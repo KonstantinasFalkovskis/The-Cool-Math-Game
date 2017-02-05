@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoolMath" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellow-stripes-texture_23-2147506644" translatesAutoresizingMaskIntoConstraints="NO" id="NuR-wU-NJc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="722"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dsn-Sa-oJH">
+                                <rect key="frame" x="52" y="40" width="270" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="e3W-IM-I33"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Your's number ..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-Ue-a1r">
+                                <rect key="frame" x="68" y="308" width="239" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="BDb-rL-eyq"/>
+                                    <constraint firstAttribute="height" constant="50" id="H9w-Np-XD4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="239" id="TY4-bR-bPZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="In8-3F-nPz">
+                                <rect key="frame" x="108" y="398" width="160" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="cat-rk-Wbh"/>
+                                    <constraint firstAttribute="height" constant="145" id="iLM-Xs-qhk"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojd-iv-a41"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NUMBERS TILL 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-GT-zHy">
+                                <rect key="frame" x="35" y="142" width="306" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="dXR-hb-hIH"/>
+                                    <constraint firstAttribute="width" constant="306" id="vc3-kq-RAK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.99217027425765991" green="0.9960973858833313" blue="0.99597984552383423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhU-QY-Maz">
+                                <rect key="frame" x="16" y="237" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Ib-6I-tph"/>
+                                    <constraint firstAttribute="width" constant="343" id="Upd-Sv-HaZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.99217027425765991" green="0.9960973858833313" blue="0.99597984552383423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkA-wy-a44">
+                                <rect key="frame" x="107" y="405" width="160" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="LPY-5w-mEr"/>
+                                    <constraint firstAttribute="height" constant="130" id="vAy-34-fQX"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="count"/>
+                                <connections>
+                                    <action selector="count:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vR7-7z-kBB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EkA-wy-a44" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6sI-eE-QSP"/>
+                            <constraint firstItem="DhU-QY-Maz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BmI-cc-36q"/>
+                            <constraint firstItem="In8-3F-nPz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EOL-wV-uS6"/>
+                            <constraint firstItem="Kcq-GT-zHy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCt-u5-mee"/>
+                            <constraint firstItem="dsn-Sa-oJH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="40" id="NHO-Uy-LJh"/>
+                            <constraint firstItem="VCh-Ue-a1r" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dcv-aq-nib"/>
+                            <constraint firstItem="dsn-Sa-oJH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="dli-ud-7qH"/>
+                            <constraint firstItem="In8-3F-nPz" firstAttribute="top" secondItem="VCh-Ue-a1r" secondAttribute="bottom" constant="40" id="e9d-lh-bxj"/>
+                            <constraint firstItem="EkA-wy-a44" firstAttribute="top" secondItem="In8-3F-nPz" secondAttribute="bottom" constant="-138" id="fJQ-wj-ZPR"/>
+                            <constraint firstItem="DhU-QY-Maz" firstAttribute="top" secondItem="Kcq-GT-zHy" secondAttribute="bottom" constant="59" id="gs6-Yg-uW7"/>
+                            <constraint firstItem="Kcq-GT-zHy" firstAttribute="top" secondItem="dsn-Sa-oJH" secondAttribute="bottom" constant="8" id="qMI-Tt-yCA"/>
+                            <constraint firstItem="VCh-Ue-a1r" firstAttribute="top" secondItem="DhU-QY-Maz" secondAttribute="bottom" constant="27" id="waV-26-tnZ"/>
+                            <constraint firstItem="VCh-Ue-a1r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yj9-sr-3vb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countButton" destination="EkA-wy-a44" id="GiW-E6-ruM"/>
+                        <outlet property="labelInfo" destination="Kcq-GT-zHy" id="KU6-Z3-HXm"/>
+                        <outlet property="labelText" destination="DhU-QY-Maz" id="vBz-Ym-NYZ"/>
+                        <outlet property="logo" destination="dsn-Sa-oJH" id="Ji7-Tq-bPy"/>
+                        <outlet property="playButton" destination="In8-3F-nPz" id="t5T-ck-LD9"/>
+                        <outlet property="textField" destination="VCh-Ue-a1r" id="kFv-BB-Mnd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="5.5999999999999996" y="398.95052473763121"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="count" width="306" height="261"/>
+        <image name="logo" width="627" height="104"/>
+        <image name="play" width="427" height="421"/>
+        <image name="yellow-stripes-texture_23-2147506644" width="626" height="626"/>
+    </resources>
 </document>

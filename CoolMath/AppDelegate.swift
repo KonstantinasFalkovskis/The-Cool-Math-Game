@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CoolMath
 //
-//  Created by Laurynas on 05/02/2017.
+//  Created by Konstantinas Falkovskis on 05/02/2017.
 //  Copyright © 2017 Falco. All rights reserved.
 //
 
